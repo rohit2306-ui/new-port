@@ -2,6 +2,7 @@
   margin: 0%;
   padding: 0%;
 }
+
 .start{
   display: flex;
   .my-card{
@@ -136,7 +137,7 @@
       .img{
         height: 100px;
         width: 100px;
-        background-color: green;
+        /* background-color: green; */
         border-radius: 50%;
         margin: auto;
         overflow: hidden;
