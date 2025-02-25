@@ -24,8 +24,27 @@
         }
         .card{
             margin: 30px 30px;
-            /* background-color: rgb(237, 236, 236); */
+            background-color: rgb(237, 236, 236);
         }
+        .intern{
+         width: 100%;
+         .interns{
+          width: 70%;
+          background-color: white;
+          padding: 20px 20px;
+          border-radius: 20px;
+         }
+        }
+        @media (max-width:500px) {
+          .intern{
+            width: 100%;
+            .interns{
+              width: 90%;
+            }
+
+          }
+        }
+        
 
     </style>
 </head>
@@ -56,9 +75,12 @@
         </div>
       </nav>
     <h1 style="text-align: center;font-size: 30px;margin-bottom: 100px;margin-top: 30px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">welcome to my Experience</h1>
-    <div style="height: auto;" class="intern">
+
+      <!-- intern section start -->
+
+    <div style="height: auto;display: flex; justify-content: center;flex-direction: column;align-items: center;" class="intern">
       <h3 style="text-align: center;">internships</h3>
-      <div style="height: auto;width: auto;margin: 20px 20px;background-color:white;border-radius: 20px;padding: 20px 20px;" class="interns">
+      <div class="interns">
         <h2>1.Edunet foundation</h2>
         <h2>About the Project</h2>
     <p>
@@ -67,7 +89,7 @@
     <p>
         The project involves training machine learning models on large datasets of X-ray and MRI images, enabling the AI system to detect a wide range of medical conditions such as fractures, tumors, infections, and neurological disorders. With constant learning and improvement, AI can provide real-time analysis, assisting healthcare professionals in making informed decisions quickly.
     </p>
-</div>
+
 
 <div class="container" id="benefits">
     <h2>Key Benefits of AI Diagnosis in X-ray and MRI</h2>
@@ -89,10 +111,16 @@
     <p>
         As AI continues to learn from more data, it will provide increasingly personalized healthcare recommendations, predicting potential health issues even before they become critical. Moreover, AI will likely help healthcare professionals in monitoring patient progress over time, enabling early intervention and preventing more serious conditions.
     </p>
+
 </div>
+<a style="padding: 10px 10px;margin: 10px 10px;background-color: rgb(72, 132, 215);color: white; text-decoration: none;border-radius: 10px;" href="https://drive.google.com/file/d/1TwF7nH71mjRrsi5HFeHNSLgkA1AmYcg6/view?usp=sharing">Offer letter</a>
       </div>
+     
+
     </div>
-    <h3 style="text-align: center;">Projects</h3>
+
+    <!-- intern section finish -->
+    <h3 style="text-align: center;margin: 10px 10px;">Projects</h3>
     <div style="display: flex;flex-wrap: wrap;justify-content: center;" class="projects-section">
         <div class="card" style="width: 18rem;">
             <img src="cunsultacy.png" class="card-img-top" alt="...">
@@ -111,10 +139,11 @@
             </div>
           </div>
     </div>
+  </div>
 </body>
 </html>
 <script
   src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
   crossorigin="anonymous"
-></script>
+></script>  

@@ -78,6 +78,14 @@
         flex-wrap: wrap;
         justify-content: center;
         .card{
+          margin: 10px 10px;
+          &:hover{
+            box-shadow: 1px 5px 10px black;
+            transition: 0.3s;
+            margin-bottom: 10px;
+            margin-right: 20px;
+           
+          }
           .card-body{
             i{
               font-size: 60px;
@@ -183,6 +191,25 @@
           height: 200px;
           /* background-color: red; */
           font-weight: 500;
+        }
+      }
+      .skill{
+        .skilss{
+          height: auto;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          .card{
+            width: 40%;
+            margin: 5px 5px;
+            .card-body{
+              
+              i{
+                font-size: 40px;
+                margin: 5px 5px;
+              }
+            }
+          }
         }
       }
     }
