@@ -5,7 +5,7 @@
 body{
   background-size: initial;
   background-color: black;
-  font-family: serif;
+  font-family: sans-serif;
   color: white;
 }
 
@@ -98,6 +98,7 @@ body{
               font-size: 60px;
               margin: 5px 5px;
             }
+          
           }
         }
       }
@@ -149,6 +150,13 @@ body{
   width: 100%;
   /* background-color: red; */
   margin-top: 50px;
+  ul{
+    li{
+      h4{
+        font-size: 18px;
+      }
+    }
+  }
 }
 footer{
   margin-top: 0px;

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rohit Thakur home page</title>
     <link rel="stylesheet" href="index.css" />
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -20,7 +21,7 @@
     />
   </head>
   <body style="background-color: black;">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">{Rohit Thakur}</a>
         <button
@@ -44,7 +45,42 @@
           </div>
         </div>
       </div>
-    </nav>
+    </nav> -->
+    
+
+<nav class="bg-black border-gray-200 dark:bg-gray-900">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <!-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" /> -->
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Rohit Thakur</span>
+    </a>
+    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        
+        <li>
+          <a href="prject.html" class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Projectss</a>
+        </li>
+        <li>
+          <a href="reserch.html" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Reserch</a>
+        </li>
+    
+        <li>
+          <!-- <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a> -->
+        </li>
+        <li>
+          <a href="contact.html" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
     <div class="start">
       <div class="my-card">
         <div class="img">
@@ -61,23 +97,25 @@
         <div class="links">
           <div class="link">
             <a style="color: black" href="https://medium.com/@rtech3388"
-              ><i class="fa-brands fa-medium"></i
+              ><i style="color: grey;font-size: 23px;" class="fa-brands fa-medium"></i
             ></a>
-            <h5 style="font-size: 8px; margin-top: 3px">Medium</h5>
+            <h5 style="font-size: 12px; margin-top: 3px">Medium</h5>
           </div>
           <div class="link">
             <a style="color: black" href="https://github.com/rohit2306-ui"
-              ><i class="fa-brands fa-github"></i
+              ><i style="font-size: 23px;" class="fa-brands fa-github"></i
             ></a>
-            <h5 style="font-size: 8px; margin-top: 3px">Github</h5>
+            <h5 style="font-size: 12px; margin-top: 3px">Github</h5>
           </div>
           <div class="link">
             <a
               style="color: black"
               href="https://www.linkedin.com/in/rohit-thakur-0853b0335/"
-              ><i class="fa-brands fa-linkedin"></i
+              ><i style="color: rgb(62, 127, 193);font-size: 23px;" class="fa-brands fa-linkedin"></i
             ></a>
-            <h5 style="font-size: 8px; margin-top: 3px">Linkdin</h5>
+            <h5 style="font-size: 12px; margin-top: 3px">Linkdin</h5>
+            <!-- <p>Total Views: <span id="views-count">0</span></p> -->
+
           </div>
         </div>
       </div>
@@ -167,7 +205,7 @@
             >Go to projects</a
           >
           <div class="core">
-            <h3 style="margin: 10px 20px; font-weight: 600;">CS fundamnetals</h3>
+            <h3 style="margin: 10px 20px; font-weight: 500;">CS fundamnetals</h3>
             <ul style="margin-left: 50px;">
               <li><h4>DBMS</h4></li>
               <li><h4>Operatin systems(OS)</h4></li>
@@ -178,19 +216,19 @@
           <div class="education">
             <h3 style="margin: 15px 25px;font-weight: 600;">Education</h3>
             <ul>
-              <li style="font-size: 20px;">Class : 10th  <h5>I have complete my class 10th by Scinece side form UP board    (2021)</h5></li>
+              <li style="font-size: 18px;">Class : 10th  <h5>I have complete my class 10th by Scinece side form UP board    (2021)</h5></li>
             </ul>
             <ul>
-              <li style="font-size: 20px;">Class : 12th  <h5>I have complete my class 12th with PCM form CBSE board    (2023)</h5></li>
+              <li style="font-size: 18px;">Class : 12th  <h5>I have complete my class 12th with PCM form CBSE board    (2023)</h5></li>
             </ul>
             <ul>
-              <li style="font-size: 20px;">JEE mains  <h5>I gave my jee in jan 2023 and score 91.17 percetile   (2023)</h5></li>
+              <li style="font-size: 18px;">JEE mains  <h5>I gave my jee in jan 2023 and score 91.17 percetile   (2023)</h5></li>
             </ul>
             <ul>
-              <li style="font-size: 20px;">B.Tech(Guru govind singh indraprasth university)(2023)  <h5>In 2023 I joined College in (CSE branch)</h5></li>
+              <li style="font-size: 18px;">B.Tech(Guru govind singh indraprasth university)(2023)  <h5>In 2023 I joined College in (CSE branch)</h5></li>
             </ul>
             <ul>
-              <li style="font-size: 20px;">Currently Reserching on infinite memory theory(2025) <h5>Working on this theory by jan 2025 can chek on <a href="https://medium.com/@rtech3388/day-2-on-infinite-memory-theory-eb47098ae5d5">infinite memory</a></h5></li>
+              <li style="font-size: 18px;">Currently Reserching on infinite memory theory(2025) <h5>Working on this theory by jan 2025 can chek on <a href="https://medium.com/@rtech3388/day-2-on-infinite-memory-theory-eb47098ae5d5">infinite memory</a></h5></li>
             </ul>
           </div>
           <h3 style="margin: 20px 20px;font-weight: 600;">Contact Me/Hire me</h3>
@@ -287,3 +325,6 @@
 
   typeString(); // Start the typing effect
 </script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+

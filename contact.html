@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+<style>
+    footer{
+  margin-top: 0px;
+  height: auto;
+  column-rule: white;
+  width: 100%;
+  background-image: url(bgc_footer.jpg);
+  background-size: cover;
+  .sections{
+    height: 300px;
+    display: flex;
+    color: white;
+    .section{
+      height: 100%;
+      width: 30%;
+      /* background-color: red; */
+      margin-left: 10px;
+      margin: 5px 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+}
+@media (max-width:500px) {
+    footer{
+    margin-top: 0px;
+    height: auto;
+    width: 100%;
+    /* background-image: url(stone-texture-background.jpg); */
+    background-size: cover;
+    .sections{
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      .section{
+        margin-top: 50px;
+        height: auto;
+        width: 100%;
+        padding-top: 30px;
+        /* background-color: red; */
+        margin-left: 10px;
+        margin: 5px 5px;
+      }
+    }
+  }
+}
+    /* Contact Section Styling */
+.contact-section {
+  background-color: #0d0d0d;
+  /* color: #e0e0e0; */
+  padding: 60px 60px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-container {
+  width: 600px;
+  /* margin: auto; */
+}
+
+.contact-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #1846dc;
+}
+
+.contact-container p {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  color: #b0b0b0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1c1c1c;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  background-color: #2c2c2c;
+  border: 1px solid #202fcf;
+}
+
+.contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact-form button {
+  background-color: #2639e3;
+  color: #ffffff;
+  padding: 15px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #2980b9;
+}
+
+</style>
+<body>
+    <nav class="bg-black border-gray-200 dark:bg-gray-900">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+              <!-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" /> -->
+              <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Rohit Thakur</span>
+          </a>
+          <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+              </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                <li>
+                    <a href="index.html" class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
+                  </li>
+              <li>
+                <a href="prject.html" class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Projectss</a>
+              </li>
+              <li>
+                <a href="reserch.html" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Reserch</a>
+              </li>
+              <li>
+                <!-- <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a> -->
+              </li>
+              <li>
+                <a href="contact.html" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+          <h2>Contact Me</h2>
+          <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions. Feel free to reach out!</p>
+          
+          <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+            <input type="hidden" name="access_key" value="c51264cf-0c3c-41f6-8c8c-26cc4719cf49" />
+      
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="message" placeholder="Your Message" required></textarea>
+      
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none" />
+      
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </section>
+      
+      <footer>
+        <div class="sections">
+          <div class="section">
+            <h3 style="margin: 10px 10px;font-family: serif;">Rohit thakur</h3>
+            <img style="height: 100px; margin: 20px 20px;" src="ipu logo.png" alt="">
+            <h3 style="font-size: 15px;font-family: serif;">Guru govind singh indraprasth university</h3>
+            <h3 style="font-size: 15px;font-family: serif;">B.Tech(CSE)</h3>
+          </div>
+          <div class="section" style="font-family: serif;">
+            <h3 style="margin: 10px 10px;font-family: serif;">My Reserch topics</h3>
+            <div class="links" style="font-size: 18px; display: flex; flex-direction: column;">
+              <a href="reserch.html" style="margin: 5px 5px;">Go to my reserch</a>
+              <a href="https://medium.com/@rtech3388/day-2-on-infinite-memory-theory-eb47098ae5d5" style="margin: 5px 5px;">1.infinite memory</a>
+            </div>
+             
+             
+            
+          </div>
+          <div class="section">
+            <p>&copy; 2025 All rights reserved for Rohit Thakur</p>
+          </div>
+        </div>
+      </footer>
+      
+</body>
+</html>
