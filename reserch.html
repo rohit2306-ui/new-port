@@ -239,109 +239,110 @@
 <h3 style="text-align: center;padding: 5px 5px;margin-top: 10px;">Reserch Day.04/03/2025</h3>
   <div class="topic">
     <h1>Mathematical Model for Frequency Stability in Space-Based Infinite Memory Storage</h1>
-        <p>
-            The concept of infinite memory storage in space relies on the transmission of 
-            <span class="highlight">Neutrino Signals</span>, ensuring minimal interference from cosmic radiation 
-            and galactic noise. However, maintaining frequency stability over <strong>infinite distances</strong> 
-            presents a significant challenge. This model establishes a mathematical foundation for 
-            <strong>frequency stability, attenuation compensation, and scalability</strong> in an expanding database system in space.
-        </p>
+    <p>
+        The concept of infinite memory storage in space relies on the transmission of 
+        <span class="highlight">Neutrino Signals</span>, ensuring minimal interference from cosmic radiation 
+        and galactic noise. However, maintaining frequency stability over <strong>infinite distances</strong> 
+        presents a significant challenge. This model establishes a mathematical foundation for 
+        <strong>frequency stability, attenuation compensation, and scalability</strong> in an expanding database system in space.
+    </p>
 
-        <h2>Signal Attenuation Over Distance</h2>
-        <p>
-            The initial frequency of the neutrino signal is represented as <code>f₀</code>, 
-            with signal transmission occurring over a distance <code>d</code>. Due to environmental factors, 
-            the signal experiences an attenuation effect, modeled by the exponential decay equation:
-        </p>
-        <div class="formula">
-            f(d) = f₀ e^(-αd)
-        </div>
-        <p>
-            Here, <code>α</code> is the <strong>signal attenuation coefficient</strong>, which depends on 
-            the medium's resistance and scattering properties in space.
-        </p>
+    <h2>Signal Attenuation Over Distance</h2>
+    <p>
+        The initial frequency of the neutrino signal is represented as <code>f<sub>0</sub></code>, 
+        with signal transmission occurring over a distance <code>d</code>. Due to environmental factors, 
+        the signal experiences an attenuation effect, modeled by the exponential decay equation:
+    </p>
+    <div class="formula">
+        f(d) = f<sub>0</sub> &times; e<sup>&minus;&alpha;d</sup>
+    </div>
+    <p>
+        Here, <code>&alpha;</code> is the <strong>signal attenuation coefficient</strong>, which depends on 
+        the medium's resistance and scattering properties in space.
+    </p>
 
-        <h2>Compensating for Signal Loss Using Magnetic Confinement</h2>
-        <p>
-            To counteract this decay, <span class="highlight">magnetic confinement</span> is introduced as a stabilizing force, 
-            represented by <code>M</code>. This force maintains signal stability by compensating for attenuation loss:
-        </p>
-        <div class="formula">
-            f<sub>comp</sub>(d) = f₀ e^(-αd) + M
-        </div>
-        <p>where <code>M</code> is dynamically adjusted using a feedback system:</p>
-        <div class="formula">
-            M = k ⋅ f₀ e^(-αd)
-        </div>
+    <h2>Compensating for Signal Loss Using Magnetic Confinement</h2>
+    <p>
+        To counteract this decay, <span class="highlight">magnetic confinement</span> is introduced as a stabilizing force, 
+        represented by <code>M</code>. This force maintains signal stability by compensating for attenuation loss:
+    </p>
+    <div class="formula">
+        f<sub>comp</sub>(d) = f<sub>0</sub> &times; e<sup>&minus;&alpha;d</sup> + M
+    </div>
+    <p>where <code>M</code> is dynamically adjusted using a feedback system:</p>
+    <div class="formula">
+        M = k &times; f<sub>0</sub> &times; e<sup>&minus;&alpha;d</sup>
+    </div>
 
-        <h2>Cosmic Interference and Frequency Correction</h2>
-        <p>
-            Another major factor affecting signal stability is cosmic interference. The frequency loss 
-            due to cosmic radiation is represented by an interference factor <code>I</code>, which depends on:
-        </p>
-        <ul>
-            <li>Cosmic ray density (<code>ρ</code>)</li>
-            <li>Interaction cross-section (<code>σ</code>)</li>
-            <li>Time elapsed (<code>τ</code>)</li>
-        </ul>
-        <div class="formula">
-            I(τ) = σρτ
-        </div>
+    <h2>Cosmic Interference and Frequency Correction</h2>
+    <p>
+        Another major factor affecting signal stability is cosmic interference. The frequency loss 
+        due to cosmic radiation is represented by an interference factor <code>I</code>, which depends on:
+    </p>
+    <ul>
+        <li>Cosmic ray density (<code>&rho;</code>)</li>
+        <li>Interaction cross-section (<code>&sigma;</code>)</li>
+        <li>Time elapsed (<code>&tau;</code>)</li>
+    </ul>
+    <div class="formula">
+        I(&tau;) = &sigma;&rho;&tau;
+    </div>
 
-        <h2>Final Stable Frequency Model</h2>
-        <p>
-            Combining magnetic confinement and cosmic interference, the corrected frequency equation is:
-        </p>
-        <div class="formula">
-            f<sub>stable</sub>(d, τ) = f₀ e^(-αd) + k ⋅ f₀ e^(-αd) - σρτ
-        </div>
+    <h2>Final Stable Frequency Model</h2>
+    <p>
+        Combining magnetic confinement and cosmic interference, the corrected frequency equation is:
+    </p>
+    <div class="formula">
+        f<sub>stable</sub>(d, &tau;) = f<sub>0</sub> &times; e<sup>&minus;&alpha;d</sup> &times; (1 + k) &minus; &sigma;&rho;&tau;
+    </div>
 
-        <h2>Dynamic Storage Expansion Model</h2>
-        <p>
-            As the memory storage system expands dynamically, every full block generates two new blocks, 
-            leading to an exponential growth of storage locations over time.
-        </p>
-        <p>If the initial system starts with <code>N₀</code> blocks, then after <code>n</code> expansion cycles:</p>
-        <div class="formula">
-            N(n) = 2ⁿ N₀
-        </div>
-        <p>Since the distance between the first and last block increases exponentially, we define:</p>
-        <div class="formula">
-            d(n) = d₀ ⋅ 2ⁿ
-        </div>
+    <h2>Dynamic Storage Expansion Model</h2>
+    <p>
+        As the memory storage system expands dynamically, every full block generates two new blocks, 
+        leading to an exponential growth of storage locations over time.
+    </p>
+    <p>If the initial system starts with <code>N<sub>0</sub></code> blocks, then after <code>n</code> expansion cycles:</p>
+    <div class="formula">
+        N(n) = 2<sup>n</sup> &times; N<sub>0</sub>
+    </div>
+    <p>Since the distance between the first and last block increases exponentially, we define:</p>
+    <div class="formula">
+        d(n) = d<sub>0</sub> &times; 2<sup>n</sup>
+    </div>
 
-        <h2>Final Frequency Stability Condition</h2>
-        <p>
-            Substituting this into the frequency equation:
-        </p>
-        <div class="formula">
-            f<sub>stable</sub>(n, τ) = f₀ e^(-α d₀ ⋅ 2ⁿ) (1 + k) - σρτ
-        </div>
-        <p>
-            For the system to maintain infinite stability, the frequency must remain greater than zero for all <code>n</code> and <code>τ</code>:
-        </p>
-        <div class="formula">
-            f₀ e^(-α d₀ ⋅ 2ⁿ) (1 + k) > σρτ
-        </div>
+    <h2>Final Frequency Stability Condition</h2>
+    <p>
+        Substituting this into the frequency equation:
+    </p>
+    <div class="formula">
+        f<sub>stable</sub>(n, &tau;) = f<sub>0</sub> &times; e<sup>&minus;&alpha; d<sub>0</sub> &times; 2<sup>n</sup></sup> &times; (1 + k) &minus; &sigma;&rho;&tau;
+    </div>
+    <p>
+        For the system to maintain infinite stability, the frequency must remain greater than zero for all <code>n</code> and <code>&tau;</code>:
+    </p>
+    <div class="formula">
+        f<sub>0</sub> &times; e<sup>&minus;&alpha; d<sub>0</sub> &times; 2<sup>n</sup></sup> &times; (1 + k) &gt; &sigma;&rho;&tau;
+    </div>
 
-        <h2>Conclusion and Next Steps</h2>
-        <p>
-            This equation ensures that the neutrino signal remains detectable and retrievable at any stage of 
-            the storage system’s expansion. The next step involves refining the coefficients <code>k</code>, <code>α</code>, 
-            and <code>σ</code> for real-world space conditions, followed by developing simulations and AI-based real-time adjustments 
-            to maintain frequency stability dynamically.
-        </p>
-        <p>
-            This theoretical model provides the foundation for creating a practical and scalable infinite memory storage system in space.
-        </p>
-        <div class="diagram">
-          <img style="width: 50%;margin-bottom: 10px;" src="next_t_1.jpg" alt="Infinite Memory Theory Diagram">
-          <img style="width: 50%;" src="next_t_2.jpg" alt="Infinite Memory Theory Diagram">
-      </div>
+    <h2>Conclusion and Next Steps</h2>
+    <p>
+        This equation ensures that the neutrino signal remains detectable and retrievable at any stage of 
+        the storage system’s expansion. The next step involves refining the coefficients <code>k</code>, <code>&alpha;</code>, 
+        and <code>&sigma;</code> for real-world space conditions, followed by developing simulations and AI-based real-time adjustments 
+        to maintain frequency stability dynamically.
+    </p>
+    <p>
+        This theoretical model provides the foundation for creating a practical and scalable infinite memory storage system in space.
+    </p>
+    <div class="diagram">
+        <img style="width: 50%;margin-bottom: 10px;" src="next_t_1.jpg" alt="Infinite Memory Theory Diagram">
+        <img style="width: 50%;" src="next_t_2.jpg" alt="Infinite Memory Theory Diagram">
+    </div>
 
-        <p><strong>Author:</strong> Rohit Thakur</p>
-        <a style="padding: 10px 10px; background-color: rgb(72, 132, 215); color: white;text-decoration: none;border-radius: 10px;margin: 10px 10px;" href="https://medium.com/@rtech3388/day-4-infinite-memory-theory-28d74b6c3c17">Read on medium</a>
-  </div>
+    <p><strong>Author:</strong> Rohit Thakur</p>
+    <a style="padding: 10px 10px; background-color: rgb(72, 132, 215); color: white;text-decoration: none;border-radius: 10px;margin: 10px 10px;" href="https://medium.com/@rtech3388/day-4-infinite-memory-theory-28d74b6c3c17">Read on Medium</a>
+</div>
+
 
   
     </div><!-- outer div -->
