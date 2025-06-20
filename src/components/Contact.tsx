@@ -37,19 +37,19 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'your.email@example.com',
-      href: 'mailto:your.email@example.com'
+      value: 'rdhak1237@gmail.com',
+      href: 'mailto:rdhak127@gmail.com'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      value: '+91 936 864 6810',
+      href: 'tel: +91 936 864 6810'
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'San Francisco, CA',
+      value: 'New delhi',
       href: 'https://maps.google.com'
     }
   ];
@@ -58,21 +58,21 @@ const Contact: React.FC = () => {
     {
       icon: Github,
       label: 'GitHub',
-      href: 'https://github.com',
+      href: 'https://github.com/rohit2306-ui',
       color: 'text-gray-700 dark:text-gray-300'
     },
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      href: 'https://linkedin.com',
+      href: 'https://www.linkedin.com/in/rohit-thakur-0853b0335/',
       color: 'text-blue-600 dark:text-blue-400'
     },
-    {
-      icon: Twitter,
-      label: 'Twitter',
-      href: 'https://twitter.com',
-      color: 'text-blue-400 dark:text-blue-300'
-    }
+    // {
+    //   icon: Twitter,
+    //   label: 'Twitter',
+    //   href: 'https://twitter.com',
+    //   color: 'text-blue-400 dark:text-blue-300'
+    // }
   ];
 
   return (
