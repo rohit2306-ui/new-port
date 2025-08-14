@@ -1,6 +1,6 @@
 import React from 'react';
 import { ChevronRight, Github, Linkedin, Mail } from 'lucide-react';
-import rohit from './rohit.jpg';
+import rohit from './rohit.jpg.png';
 
 const Hero: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
