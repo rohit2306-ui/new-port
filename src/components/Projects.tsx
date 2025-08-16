@@ -1,72 +1,95 @@
-import React from 'react';
-import { ExternalLink, Github, Code, Zap, Shield, Sparkles } from 'lucide-react';
-import cunsultacyImg from './cunsultacy.png'; // Adjust path if needed
-import connectup from './connectup.png'
-import lib from './libraryweb.png'
-import property from './propertyweb.png'
-import chat from './chatapplication.png'
-import stock from './stock_predictor.png'
+import React from "react";
+import {
+  ExternalLink,
+  Github,
+  Code,
+  Zap,
+  Shield,
+  Sparkles,
+} from "lucide-react";
+import cunsultacyImg from "./cunsultacy.png"; // Adjust path if needed
+import connectup from "./connectup.png";
+import lib from "./libraryweb.png";
+import property from "./propertyweb.png";
+import chat from "./chatapplication.png";
+import stock from "./stock_predictor.png";
+import ai from "./shastra.png"
 const Projects: React.FC = () => {
   const projects = [
-    {
-  title: 'Consultancy Web',
-  description: 'Developed a platform to solve IT problems (CRUD Consultancy).',
-  techStack: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
-  image: cunsultacyImg,  // use the imported image
-  githubUrl: '',
-  liveUrl: 'https://crud-cunsultancy.vercel.app/',
-  category: 'Full Stack',
-  icon: Code,
-}
-,
-    {
-      title: 'ConnectUp',
-      description: 'Fully scaled social media application built with Firebase.',
-      techStack: ['React', 'Firebase', 'Tailwind'],
-      image: connectup,
-      githubUrl: '',
-      liveUrl: 'https://connect-up-zeta.vercel.app/',
-      category: 'Social Media',
-      icon: Sparkles,
-    },
-    {
-      title: 'Library Site',
-      description: 'Created a platform to read premium books online.',
-      techStack: ['HTML', 'CSS', 'JavaScript'],
-      image: lib,
-      githubUrl: '',
-      liveUrl: 'https://library4all.vercel.app/',
-      category: 'Frontend',
+     {  
+      title: "शास्त्रAi",
+      description:
+        "Yur AI Project Partner — Helping You Build Smarter Reports",
+      techStack: ["React.js", "Tailwind", "JavaScript", "Firebase"],
+      image: ai, // use the imported image
+      githubUrl: "",
+      liveUrl: "https://shashtra-ai-7a4n.vercel.app/",
+      category: "Full Stack",
       icon: Code,
     },
     {
-      title: 'Property Dealing Web',
-      description: 'Developed a 2-interface site for property dealers and buyers.',
-      techStack: ['React', 'Firebase', 'Tailwind'],
-      image: property,
-      githubUrl: '',
-      liveUrl: 'https://property-dealer-9cci.vercel.app/',
-      category: 'Real Estate',
-      icon: Zap,
+      title: "ConnectUp",
+      description: "Fully scaled social media application built with Firebase.",
+      techStack: ["React", "Firebase", "Tailwind"],
+      image: connectup,
+      githubUrl: "",
+      liveUrl: "https://connect-up-zeta.vercel.app/",
+      category: "Social Media",
+      icon: Sparkles,
     },
     {
-      title: 'Chat Application',
-      description: 'Real-time chat app with Firebase Auth and phone/email login.',
-      techStack: ['React', 'Firebase', 'Tailwind'],
+      title: "Consultancy Web",
+      description:
+        "Developed a platform to solve IT problems (CRUD Consultancy).",
+      techStack: ["HTML", "CSS", "JavaScript", "Firebase"],
+      image: cunsultacyImg, // use the imported image
+      githubUrl: "",
+      liveUrl: "https://crud-cunsultancy.vercel.app/",
+      category: "Full Stack",
+      icon: Code,
+    },
+     {
+      title: "Property Dealing Web",
+      description:
+        "Developed a 2-interface site for property dealers and buyers.",
+      techStack: ["React", "Firebase", "Tailwind"],
+      image: property,
+      githubUrl: "",
+      liveUrl: "https://property-dealer-9cci.vercel.app/",
+      category: "Real Estate",
+      icon: Zap,
+    },
+     {
+      title: "Chat Application",
+      description:
+        "Real-time chat app with Firebase Auth and phone/email login.",
+      techStack: ["React", "Firebase", "Tailwind"],
       image: chat,
-      githubUrl: '',
-      liveUrl: 'https://turn-chat-app.vercel.app/chat.html',
-      category: 'Messaging',
+      githubUrl: "",
+      liveUrl: "https://turn-chat-app.vercel.app/chat.html",
+      category: "Messaging",
       icon: Shield,
     },
     {
-      title: 'Stock Market Predictor',
-      description: 'Real-time stock prediction using previous market data.',
-      techStack: ['React', 'Chart.js', 'API'],
+      title: "Library Site",
+      description: "Created a platform to read premium books online.",
+      techStack: ["HTML", "CSS", "JavaScript"],
+      image: lib,
+      githubUrl: "",
+      liveUrl: "https://library4all.vercel.app/",
+      category: "Frontend",
+      icon: Code,
+    },
+   
+   
+    {
+      title: "Stock Market Predictor",
+      description: "Real-time stock prediction using previous market data.",
+      techStack: ["React", "Chart.js", "API"],
       image: stock,
-      githubUrl: '',
-      liveUrl: 'https://stockpredictor-com.vercel.app/',
-      category: 'AI/ML',
+      githubUrl: "",
+      liveUrl: "https://stockpredictor-com.vercel.app/",
+      category: "AI/ML",
       icon: Sparkles,
     },
   ];
@@ -80,7 +103,8 @@ const Projects: React.FC = () => {
             Featured Projects
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            A showcase of my work featuring real-world solutions and smart technologies that reflect my skills and innovation.
+            A showcase of my work featuring real-world solutions and smart
+            technologies that reflect my skills and innovation.
           </p>
         </div>
 
@@ -102,7 +126,10 @@ const Projects: React.FC = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute top-4 left-4 p-2 bg-white/90 dark:bg-gray-900/90 rounded-lg backdrop-blur-sm">
-                    <Icon size={20} className="text-blue-600 dark:text-blue-400" />
+                    <Icon
+                      size={20}
+                      className="text-blue-600 dark:text-blue-400"
+                    />
                   </div>
                   <div className="absolute top-4 right-4 px-3 py-1 bg-blue-600/90 text-white text-sm font-medium rounded-full backdrop-blur-sm">
                     {project.category}
