@@ -22,7 +22,7 @@ const Internships: React.FC = () => {
       companyUrl: 'https://drive.google.com/file/d/1TwF7nH71mjRrsi5HFeHNSLgkA1AmYcg6/view',
     },
      {
-      company: 'GuisedUP Gruops',
+      company: 'GuisedUP Groups',
       role: 'Sde intern',
       duration: 'july 2025 - present',
       location: 'Remote, Banglore karnataka',
@@ -33,7 +33,7 @@ const Internships: React.FC = () => {
       achievements: [
         'working on next js 13 with tailwind css and firebase',
         'working on backend with node js and express js',
-        'usning postgres sql as database',
+        'using postgres sql as database',
         'working with prisma orm',
       ],
       technologies: ['Next js 13', 'Tailwind css', 'Firebase', 'Node js', 'Express js', 'Postgres sql', 'Prisma orm'],
