@@ -21,6 +21,24 @@ const Internships: React.FC = () => {
       technologies: ['Python', 'PyTorch', 'OpenCV', 'React', 'Firebase', 'MONAI', 'CheXNet'],
       companyUrl: 'https://drive.google.com/file/d/1TwF7nH71mjRrsi5HFeHNSLgkA1AmYcg6/view',
     },
+     {
+      company: 'GuisedUP Gruops',
+      role: 'Sde intern',
+      duration: 'july 2025 - present',
+      location: 'Remote, Banglore karnataka',
+      type: 'Full-time',
+      logo: Building,
+      description:
+        'contubuting to develop a full stack based projectn which is not to discolab;e beacuse of the secuirty issues, and work on project is going om currently now',
+      achievements: [
+        'working on next js 13 with tailwind css and firebase',
+        'working on backend with node js and express js',
+        'usning postgres sql as database',
+        'working with prisma orm',
+      ],
+      technologies: ['Next js 13', 'Tailwind css', 'Firebase', 'Node js', 'Express js', 'Postgres sql', 'Prisma orm'],
+      
+    }
   ];
 
   return (
