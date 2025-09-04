@@ -234,7 +234,7 @@ const Hero: React.FC = () => {
 
       {/* 🔥 Sliding Drawer */}
       <div
-        className={`fixed top-0 right-0 h-full w-80 bg-white dark:bg-gray-900 shadow-2xl transform transition-transform duration-500 ${
+        className={`fixed top-0 right-0 py-20 h-full w-80 bg-white dark:bg-gray-900 shadow-2xl transform transition-transform duration-500 ${
           showMessages ? "translate-x-0" : "translate-x-full"
         }`}
       >
