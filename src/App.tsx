@@ -21,17 +21,17 @@ import Followers from "./components/Followers";
 function App() {
   return (
     <ThemeProvider>
-      <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+      <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300 overflow-x-hidden overflow-y-auto">
         <Router>
           <Header />
 
-          <main>
+          <main className="overflow-x-hidden">
             <Routes>
               {/* Home Page (all sections like before) */}
               <Route
                 path="/"
                 element={
-                  <>
+                  <div className="overflow-hidden">
                     <Hero />
                     <About />
                     <Projects />
@@ -39,7 +39,7 @@ function App() {
                     <Research />
                     <Resume />
                     <Contact />
-                  </>
+                  </div>
                 }
               />
 
