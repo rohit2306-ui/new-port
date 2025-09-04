@@ -7,21 +7,24 @@ import {
   Shield,
   Sparkles,
 } from "lucide-react";
-import cunsultacyImg from "./cunsultacy.png"; // Adjust path if needed
+import { motion } from "framer-motion"; // ✅ Import framer-motion
+
+// Images
+import cunsultacyImg from "./cunsultacy.png";
 import connectup from "./connectup.png";
 import lib from "./libraryweb.png";
 import property from "./propertyweb.png";
 import chat from "./chatapplication.png";
 import stock from "./stock_predictor.png";
-import ai from "./shastra.png"
+import ai from "./shastra.png";
+
 const Projects: React.FC = () => {
   const projects = [
-     {  
+    {
       title: "शास्त्रAi",
-      description:
-        "Yur AI Project Partner — Helping You Build Smarter Reports",
+      description: "Your AI Project Partner — Helping You Build Smarter Reports",
       techStack: ["React.js", "Tailwind", "JavaScript", "Firebase"],
-      image: ai, // use the imported image
+      image: ai,
       githubUrl: "",
       liveUrl: "https://shashtra-ai-7a4n.vercel.app/",
       category: "Full Stack",
@@ -39,19 +42,17 @@ const Projects: React.FC = () => {
     },
     {
       title: "Consultancy Web",
-      description:
-        "Developed a platform to solve IT problems (CRUD Consultancy).",
+      description: "Developed a platform to solve IT problems (CRUD Consultancy).",
       techStack: ["HTML", "CSS", "JavaScript", "Firebase"],
-      image: cunsultacyImg, // use the imported image
+      image: cunsultacyImg,
       githubUrl: "",
       liveUrl: "https://crud-cunsultancy.vercel.app/",
       category: "Full Stack",
       icon: Code,
     },
-     {
+    {
       title: "Property Dealing Web",
-      description:
-        "Developed a 2-interface site for property dealers and buyers.",
+      description: "Developed a 2-interface site for property dealers and buyers.",
       techStack: ["React", "Firebase", "Tailwind"],
       image: property,
       githubUrl: "",
@@ -59,7 +60,7 @@ const Projects: React.FC = () => {
       category: "Real Estate",
       icon: Zap,
     },
-     {
+    {
       title: "Chat Application",
       description:
         "Real-time chat app with Firebase Auth and phone/email login.",
@@ -80,8 +81,6 @@ const Projects: React.FC = () => {
       category: "Frontend",
       icon: Code,
     },
-   
-   
     {
       title: "Stock Market Predictor",
       description: "Real-time stock prediction using previous market data.",
@@ -98,7 +97,13 @@ const Projects: React.FC = () => {
     <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Featured Projects
           </h2>
@@ -106,16 +111,20 @@ const Projects: React.FC = () => {
             A showcase of my work featuring real-world solutions and smart
             technologies that reflect my skills and innovation.
           </p>
-        </div>
+        </motion.div>
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => {
             const Icon = project.icon;
             return (
-              <div
+              <motion.div
                 key={index}
                 className="group bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden"
+                initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.7, delay: index * 0.1 }}
+                viewport={{ once: true }}
               >
                 {/* Project Image */}
                 <div className="relative overflow-hidden">
@@ -179,13 +188,19 @@ const Projects: React.FC = () => {
                     </div>
                   )}
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>
 
         {/* View More Button */}
-        <div className="text-center mt-12">
+        <motion.div
+          className="text-center mt-12"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
           <a
             href="https://github.com/rohit2306-ui"
             target="_blank"
@@ -195,7 +210,7 @@ const Projects: React.FC = () => {
             <Github size={20} />
             <span>View All Projects</span>
           </a>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,104 +1,126 @@
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, MessageCircle } from 'lucide-react';
+"use client";
+import React, { useState } from "react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  Github,
+  Linkedin,
+  MessageCircle,
+} from "lucide-react";
+import { motion } from "framer-motion";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
     // Reset form
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setFormData({ name: "", email: "", subject: "", message: "" });
     setIsSubmitting(false);
-    
-    // Show success message (you could implement a proper notification system)
-    alert('Message sent successfully! I\'ll get back to you soon.');
+
+    alert("Message sent successfully! I'll get back to you soon.");
   };
 
   const contactInfo = [
     {
       icon: Mail,
-      label: 'Email',
-      value: 'rdhak1237@gmail.com',
-      href: 'mailto:rdhak127@gmail.com'
+      label: "Email",
+      value: "rdhak1237@gmail.com",
+      href: "mailto:rdhak127@gmail.com",
     },
     {
       icon: Phone,
-      label: 'Phone',
-      value: '+91 936 864 6810',
-      href: 'tel: +91 936 864 6810'
+      label: "Phone",
+      value: "+91 936 864 6810",
+      href: "tel: +91 936 864 6810",
     },
     {
       icon: MapPin,
-      label: 'Location',
-      value: 'New delhi',
-      href: 'https://maps.google.com'
-    }
+      label: "Location",
+      value: "New Delhi",
+      href: "https://maps.google.com",
+    },
   ];
 
   const socialLinks = [
     {
       icon: Github,
-      label: 'GitHub',
-      href: 'https://github.com/rohit2306-ui',
-      color: 'text-gray-700 dark:text-gray-300'
+      label: "GitHub",
+      href: "https://github.com/rohit2306-ui",
+      color: "text-gray-700 dark:text-gray-300",
     },
     {
       icon: Linkedin,
-      label: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/rohit-thakur-0853b0335/',
-      color: 'text-blue-600 dark:text-blue-400'
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/rohit-thakur-0853b0335/",
+      color: "text-blue-600 dark:text-blue-400",
     },
-    // {
-    //   icon: Twitter,
-    //   label: 'Twitter',
-    //   href: 'https://twitter.com',
-    //   color: 'text-blue-400 dark:text-blue-300'
-    // }
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-indigo-900/20">
+    <section
+      id="contact"
+      className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-indigo-900/20"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Get In Touch
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            I'm always open to discussing new opportunities, collaborations, or just having a chat about technology. 
-            Let's connect and create something amazing together.
+            I'm always open to discussing new opportunities, collaborations, or
+            just having a chat about technology. Let's connect and create
+            something amazing together.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
-          <div className="space-y-8">
+          <motion.div
+            className="space-y-8"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          >
             <div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
                 Let's Start a Conversation
               </h3>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
-                Whether you have a project in mind, want to collaborate on research, or simply want to connect, 
-                I'd love to hear from you. I typically respond within 24 hours.
+                Whether you have a project in mind, want to collaborate on
+                research, or simply want to connect, I'd love to hear from you.
+                I typically respond within 24 hours.
               </p>
 
               {/* Contact Details */}
@@ -112,7 +134,10 @@ const Contact: React.FC = () => {
                       className="flex items-center space-x-4 p-4 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
                     >
                       <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-lg group-hover:bg-blue-200 dark:group-hover:bg-blue-900/50 transition-colors duration-300">
-                        <Icon size={24} className="text-blue-600 dark:text-blue-400" />
+                        <Icon
+                          size={24}
+                          className="text-blue-600 dark:text-blue-400"
+                        />
                       </div>
                       <div>
                         <div className="font-semibold text-gray-900 dark:text-white">
@@ -143,28 +168,44 @@ const Contact: React.FC = () => {
                         rel="noopener noreferrer"
                         className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 group"
                       >
-                        <Icon size={24} className={`${social.color} group-hover:scale-110 transition-transform duration-300`} />
+                        <Icon
+                          size={24}
+                          className={`${social.color} group-hover:scale-110 transition-transform duration-300`}
+                        />
                       </a>
                     );
                   })}
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Contact Form */}
-          <div className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-2xl">
+          <motion.div
+            className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-2xl"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+          >
             <div className="flex items-center space-x-2 mb-6">
-              <MessageCircle size={24} className="text-blue-600 dark:text-blue-400" />
+              <MessageCircle
+                size={24}
+                className="text-blue-600 dark:text-blue-400"
+              />
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
                 Send a Message
               </h3>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Form Fields */}
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                  >
                     Name *
                   </label>
                   <input
@@ -179,7 +220,10 @@ const Contact: React.FC = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                  >
                     Email *
                   </label>
                   <input
@@ -196,7 +240,10 @@ const Contact: React.FC = () => {
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label
+                  htmlFor="subject"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                >
                   Subject *
                 </label>
                 <input
@@ -212,7 +259,10 @@ const Contact: React.FC = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                >
                   Message *
                 </label>
                 <textarea
@@ -245,7 +295,7 @@ const Contact: React.FC = () => {
                 )}
               </button>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

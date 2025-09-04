@@ -1,100 +1,158 @@
-import React from 'react';
-import { Building, Calendar, MapPin, ExternalLink, Award, Target } from 'lucide-react';
+import React from "react";
+import {
+  Building,
+  Calendar,
+  MapPin,
+  ExternalLink,
+  Award,
+  Target,
+} from "lucide-react";
+import { motion } from "framer-motion";
 
 const Internships: React.FC = () => {
   const internships = [
     {
-      company: 'Edunet Foundation',
-      role: 'AI Research Intern',
-      duration: 'Feb 2024 - Apr 2024',
-      location: 'Remote, India',
-      type: 'Part-time',
+      company: "Edunet Foundation",
+      role: "AI Research Intern",
+      duration: "Feb 2024 - Apr 2024",
+      location: "Remote, India",
+      type: "Part-time",
       logo: Building,
       description:
-        'Contributed to the development of an AI-based diagnostic system for analyzing MRI and X-ray images using deep learning. The system aimed to improve medical diagnostics and reduce human error by leveraging machine learning.',
+        "Contributed to the development of an AI-based diagnostic system for analyzing MRI and X-ray images using deep learning.",
       achievements: [
-        'Integrated PyTorch and OpenCV to process and analyze medical image data',
-        'Developed a real-time web interface for diagnosis using React and Firebase',
-        'Researched and experimented with MONAI and CheXNet for medical image classification',
-        'Built a multilingual web platform to support wider accessibility',
+        "Integrated PyTorch and OpenCV to process and analyze medical image data",
+        "Developed a real-time web interface for diagnosis using React and Firebase",
+        "Researched and experimented with MONAI and CheXNet for medical image classification",
+        "Built a multilingual web platform to support wider accessibility",
       ],
-      technologies: ['Python', 'PyTorch', 'OpenCV', 'React', 'Firebase', 'MONAI', 'CheXNet'],
-      companyUrl: 'https://drive.google.com/file/d/1TwF7nH71mjRrsi5HFeHNSLgkA1AmYcg6/view',
+      technologies: [
+        "Python",
+        "PyTorch",
+        "OpenCV",
+        "React",
+        "Firebase",
+        "MONAI",
+        "CheXNet",
+      ],
+      companyUrl:
+        "https://drive.google.com/file/d/1TwF7nH71mjRrsi5HFeHNSLgkA1AmYcg6/view",
     },
-     {
-      company: 'GuisedUP Groups',
-      role: 'Sde intern',
-      duration: 'july 2025 - present',
-      location: 'Remote, Banglore karnataka',
-      type: 'Full-time',
+    {
+      company: "GuisedUP Groups",
+      role: "SDE Intern",
+      duration: "July 2025 - Present",
+      location: "Remote, Bangalore, Karnataka",
+      type: "Full-time",
       logo: Building,
       description:
-        'contubuting to develop a full stack based projectn which is not to discolab;e beacuse of the secuirty issues, and work on project is going om currently now',
+        "Contributing to develop a full stack based project (details undisclosed due to security).",
       achievements: [
-        'working on next js 13 with tailwind css and firebase',
-        'working on backend with node js and express js',
-        'using postgres sql as database',
-        'working with prisma orm',
+        "Working on Next.js 13 with Tailwind CSS and Firebase",
+        "Building backend with Node.js and Express.js",
+        "Using PostgreSQL as database",
+        "Working with Prisma ORM",
       ],
-      technologies: ['Next js 13', 'Tailwind css', 'Firebase', 'Node js', 'Express js', 'Postgres sql', 'Prisma orm'],
-      
-    }
+      technologies: [
+        "Next.js 13",
+        "Tailwind CSS",
+        "Firebase",
+        "Node.js",
+        "Express.js",
+        "PostgreSQL",
+        "Prisma ORM",
+      ],
+    },
   ];
 
   return (
     <section id="internships" className="py-20 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+        >
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Professional Experience
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            I've had the opportunity to work on impactful projects that blend AI and software engineering. 
-            As a Computer Science undergrad at GGSIPU with a 92 percentile in JEE Mains and a GATE 2026 aspirant, 
-            I am focused on building systems that solve real-world problems.
+            I've had the opportunity to work on impactful projects that blend AI
+            and software engineering.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Experience Timeline */}
-        <div className="space-y-12">
+        {/* Timeline */}
+        <div className="space-y-16">
           {internships.map((exp, index) => {
             const Logo = exp.logo;
             return (
-              <div key={index} className="relative group">
+              <motion.div
+                key={index}
+                className="relative group"
+                initial={{ opacity: 0, x: index % 2 === 0 ? -80 : 80 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+              >
                 {index < internships.length - 1 && (
                   <div className="absolute left-8 lg:left-1/2 top-20 w-0.5 h-32 bg-gradient-to-b from-blue-500 to-indigo-600 transform lg:-translate-x-0.5 hidden sm:block"></div>
                 )}
 
                 <div
                   className={`flex flex-col lg:flex-row items-start lg:items-center ${
-                    index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
+                    index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
                   } gap-8`}
                 >
+                  {/* Timeline dot with glow */}
                   <div className="relative lg:flex-shrink-0 hidden lg:block">
-                    <div className="w-4 h-4 bg-blue-500 rounded-full border-4 border-white dark:border-gray-900 shadow-lg"></div>
+                    <motion.div
+                      className="w-4 h-4 bg-blue-500 rounded-full border-4 border-white dark:border-gray-900 shadow-lg"
+                      animate={{ scale: [1, 1.2, 1], opacity: [1, 0.6, 1] }}
+                      transition={{ duration: 2, repeat: Infinity }}
+                    />
                   </div>
 
-                  <div className={`flex-1 ${index % 2 === 0 ? 'lg:pr-8' : 'lg:pl-8'}`}>
-                    <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1">
+                  {/* Card */}
+                  <motion.div
+                    className={`flex-1 ${
+                      index % 2 === 0 ? "lg:pr-8" : "lg:pl-8"
+                    }`}
+                    whileHover={{ scale: 1.02, y: -4 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
+                      {/* Header */}
                       <div className="flex items-start justify-between mb-6">
                         <div className="flex items-center space-x-4">
                           <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-xl">
-                            <Logo size={24} className="text-blue-600 dark:text-blue-400" />
+                            <Logo
+                              size={24}
+                              className="text-blue-600 dark:text-blue-400"
+                            />
                           </div>
                           <div>
                             <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                               {exp.role}
                             </h3>
-                            <a
-                              href={exp.companyUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="flex items-center space-x-1 text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200"
-                            >
-                              <span>{exp.company}</span>
-                              <ExternalLink size={16} />
-                            </a>
+                            {exp.companyUrl ? (
+                              <a
+                                href={exp.companyUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center space-x-1 text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
+                              >
+                                <span>{exp.company}</span>
+                                <ExternalLink size={16} />
+                              </a>
+                            ) : (
+                              <span className="text-blue-600 dark:text-blue-400 font-semibold">
+                                {exp.company}
+                              </span>
+                            )}
                           </div>
                         </div>
                         <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-medium rounded-full">
@@ -102,6 +160,7 @@ const Internships: React.FC = () => {
                         </span>
                       </div>
 
+                      {/* Duration + Location */}
                       <div className="flex flex-wrap items-center gap-4 mb-6 text-sm text-gray-500 dark:text-gray-400">
                         <div className="flex items-center space-x-1">
                           <Calendar size={16} />
@@ -113,10 +172,12 @@ const Internships: React.FC = () => {
                         </div>
                       </div>
 
+                      {/* Description */}
                       <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
                         {exp.description}
                       </p>
 
+                      {/* Achievements */}
                       <div className="mb-6">
                         <h4 className="flex items-center space-x-2 text-lg font-semibold text-gray-900 dark:text-white mb-4">
                           <Target size={18} className="text-green-500" />
@@ -124,33 +185,50 @@ const Internships: React.FC = () => {
                         </h4>
                         <ul className="space-y-2">
                           {exp.achievements.map((achievement, i) => (
-                            <li key={i} className="flex items-start space-x-3">
-                              <Award size={16} className="text-green-500 mt-0.5 flex-shrink-0" />
-                              <span className="text-gray-600 dark:text-gray-300">{achievement}</span>
-                            </li>
+                            <motion.li
+                              key={i}
+                              className="flex items-start space-x-3"
+                              initial={{ opacity: 0, x: -20 }}
+                              whileInView={{ opacity: 1, x: 0 }}
+                              transition={{ duration: 0.5, delay: i * 0.15 }}
+                              viewport={{ once: true }}
+                            >
+                              <Award
+                                size={16}
+                                className="text-green-500 mt-0.5 flex-shrink-0"
+                              />
+                              <span className="text-gray-600 dark:text-gray-300">
+                                {achievement}
+                              </span>
+                            </motion.li>
                           ))}
                         </ul>
                       </div>
 
+                      {/* Tech Stack */}
                       <div>
                         <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">
                           Technologies Used
                         </h4>
                         <div className="flex flex-wrap gap-2">
                           {exp.technologies.map((tech, i) => (
-                            <span
+                            <motion.span
                               key={i}
                               className="px-3 py-1 bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm rounded-full border border-gray-200 dark:border-gray-600 font-medium"
+                              initial={{ opacity: 0, scale: 0.8 }}
+                              whileInView={{ opacity: 1, scale: 1 }}
+                              transition={{ duration: 0.3, delay: i * 0.1 }}
+                              viewport={{ once: true }}
                             >
                               {tech}
-                            </span>
+                            </motion.span>
                           ))}
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>

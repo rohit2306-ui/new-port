@@ -1,30 +1,55 @@
-import React from 'react';
-import { ThemeProvider } from './contexts/ThemeContext';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import Projects from './components/Projects';
-import Internships from './components/Internships';
-import Research from './components/Research';
-import Resume from './components/Resume';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+// Context
+import { ThemeProvider } from "./contexts/ThemeContext";
+
+// Components (common)
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
+// Pages
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import Internships from "./components/Internships";
+import Research from "./components/Research";
+import Resume from "./components/Resume";
+import Contact from "./components/Contact";
+import Followers from "./components/Followers";
 
 function App() {
   return (
     <ThemeProvider>
       <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
-        <Header />
-        <main>
-          <Hero />
-          <About />
-          <Projects />
-          <Internships />
-          <Research />
-          <Resume />
-          <Contact />
-        </main>
-        <Footer />
+        <Router>
+          <Header />
+
+          <main>
+            <Routes>
+              {/* Home Page (all sections like before) */}
+              <Route
+                path="/"
+                element={
+                  <>
+                    <Hero />
+                    <About />
+                    <Projects />
+                    <Internships />
+                    <Research />
+                    <Resume />
+                    <Contact />
+                  </>
+                }
+              />
+
+              {/* Followers Page */}
+              <Route path="/followers" element={<Followers />} />
+            </Routes>
+          </main>
+
+          <Footer />
+        </Router>
       </div>
     </ThemeProvider>
   );
